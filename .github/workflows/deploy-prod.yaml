@@ -5,6 +5,7 @@ on:
       - "v[0-9]+.[0-9]+.[0-9]+"
 env:
   APP_NAME: "gitops-backend"
+  NAMESPACE: "app-prod-14"
 jobs:
   build:
     runs-on: "ubuntu-latest"
@@ -62,4 +63,4 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add projects/gitops-demo-backend/vars/vars.json
           git commit -m "Update version ${{ env.APP_NAME }} in namespace ${{ env.NAMESPACE }} to $VERSION"
-          git push peerawitp/k8s-manifest HEAD:main
+          git push peerawitp/k8s-manifest.git HEAD:main
