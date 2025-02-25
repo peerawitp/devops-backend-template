@@ -26,7 +26,7 @@ func main() {
 
 	e.GET("/", func(c echo.Context) error {
 		return c.JSON(http.StatusOK, echo.Map{
-			"message": "Backend is running",
+			"message": "Backend is running 🚀",
 		})
 	})
 
